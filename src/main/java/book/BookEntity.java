@@ -5,7 +5,7 @@ import java.sql.Date;
 
 
 @Entity
-    @Table(schema = "books", name = "book")
+    @Table(name = "books")
     public class BookEntity {
 
         //	id int not null auto_increment,
@@ -21,7 +21,11 @@ import java.sql.Date;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-        @Column(name = "title")
+        @Column(name = "id")
+        private long bookId;
+
+
+    @Column(name = "title")
         private String bookTitle;
 
         @Column(name = "authorID")
