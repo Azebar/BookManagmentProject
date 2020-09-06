@@ -5,13 +5,25 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 @Entity
-@Table(schema = "users", name = "user")
+@Table(name = "users")
 public class UserEntity {
+
+    //id int not null auto_increment,
+    //	first_name varchar(20) not null,
+    //	last_name varchar(20) not null,
+    //	email varchar(20) not null unique,
+    //	username varchar(20) not null unique,
+    //	phone varchar(20) null,
+    //	password varchar(100) not null,
+    //	dateOfBirth date not null,
+    //    address varchar(200) not null,
+    //    created_at timestamp default current_timestamp,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "id")
-    private long id;
+    private long userId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -34,6 +46,9 @@ public class UserEntity {
     @Column(name = "dateOfBirth")
     private Date dateOfBirth;
 
+    @Column(name = "address")
+    private String userAddress;
+
     private Date created;
     private Date updated;
 
@@ -47,29 +62,12 @@ public class UserEntity {
         updated = new Date();
     }
 
-    public UserEntity() {
+    public long getUserId() {
+        return userId;
     }
 
-    public UserEntity(String firstName, String lastName, String email, String username, String phone, String gender,
-                      String userType, String password, String dateOfBirth, String address, String countryCode,
-                      boolean isActive) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.phone = phone;
-        this.password = password;
-        this.dateOfBirth = convertDateStringToDateFormat(dateOfBirth);
-        this.created = created;
-        this.updated = updated;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -128,6 +126,14 @@ public class UserEntity {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
+    }
+
     public Date getCreated() {
         return created;
     }
@@ -141,6 +147,24 @@ public class UserEntity {
     }
 
     public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public UserEntity() {
+    }
+
+    public UserEntity(long userId, String firstName, String lastName, String email, String username, String phone,
+                      String password, Date dateOfBirth, String userAddress, Date created, Date updated) {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.phone = phone;
+        this.password = password;
+        this.dateOfBirth = dateOfBirth;
+        this.userAddress = userAddress;
+        this.created = created;
         this.updated = updated;
     }
 
