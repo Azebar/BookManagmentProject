@@ -1,4 +1,4 @@
-package Book;
+package book;
 
 import javax.persistence.*;
 import java.sql.Date;

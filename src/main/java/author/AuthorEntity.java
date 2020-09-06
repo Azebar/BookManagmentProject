@@ -1,4 +1,4 @@
-package Author;
+package author;
 
 public class AuthorEntity {
 }

@@ -1,4 +1,4 @@
-package User;
+package user;
 
 import javax.persistence.*;
 import java.util.Date;

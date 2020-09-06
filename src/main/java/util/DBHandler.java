@@ -1,6 +1,6 @@
 package util;
 
-import User.UserEntity;
+import user.UserEntity;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

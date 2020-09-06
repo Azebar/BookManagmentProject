@@ -1,4 +1,4 @@
-package Rental;
+package rental;
 
 public class RentalEntity {
 
