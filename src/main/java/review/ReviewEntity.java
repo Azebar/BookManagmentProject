@@ -1,5 +1,6 @@
 package review;
 
+import book.BookEntity;
 import javax.persistence.*;
 
 @Entity
@@ -24,9 +25,61 @@ public class ReviewEntity {
     @Column(name = "rating")
     private double reviewRating;
 
-    @Column(name = "bookID")
-    private int bookId;
+    @ManyToOne
+    @JoinColumn(name = "bookID")
+    private BookEntity book;
 
     @Column(name = "userID")
     private int userId;
+
+    public long getReviewId() {
+        return reviewId;
+    }
+
+    public void setReviewId(long reviewId) {
+        this.reviewId = reviewId;
+    }
+
+    public String getReviewText() {
+        return reviewText;
+    }
+
+    public void setReviewText(String reviewText) {
+        this.reviewText = reviewText;
+    }
+
+    public double getReviewRating() {
+        return reviewRating;
+    }
+
+    public void setReviewRating(double reviewRating) {
+        this.reviewRating = reviewRating;
+    }
+
+    public BookEntity getBook() {
+        return book;
+    }
+
+    public void setBook(BookEntity book) {
+        this.book = book;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public ReviewEntity() {
+    }
+
+    public ReviewEntity(long reviewId, String reviewText, double reviewRating, BookEntity book, int userId) {
+        this.reviewId = reviewId;
+        this.reviewText = reviewText;
+        this.reviewRating = reviewRating;
+        this.book = book;
+        this.userId = userId;
+    }
 }
