@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(schema = "authors", name = "authors")
+@Table(name = "authors")
 public class AuthorEntity {
 
     //	id int not null auto_increment,
@@ -16,8 +16,9 @@ public class AuthorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "id")
-    private long id;
+    private long authorId;
 
     @Column(name = "first_name")
     private String firstName;

@@ -5,7 +5,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 @Entity
-@Table(schema = "users", name = "user")
+@Table(name = "users")
 public class UserEntity {
 
     //id int not null auto_increment,
@@ -21,8 +21,9 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "id")
-    private long id;
+    private long userId;
 
     @Column(name = "first_name")
     private String firstName;
