@@ -1,2 +1,3 @@
 *.iml
 /src/main/resources/
+/*.idea
