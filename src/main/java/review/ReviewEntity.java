@@ -30,3 +30,5 @@ public class ReviewEntity {
     @Column(name = "userID")
     private int userId;
 }
+
+
