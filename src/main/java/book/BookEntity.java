@@ -9,10 +9,6 @@ import java.util.List;
 
 
 @Entity
-<<<<<<< HEAD
-    @Table(name = "books")
-    public class BookEntity {
-=======
 @Table(name = "books")
 public class BookEntity {
 
@@ -82,82 +78,6 @@ public class BookEntity {
     public void setBookPrice(String bookPrice) {
         this.bookPrice = bookPrice;
     }
->>>>>>> userRepository
-
-    public Date getBookReleaseYear() {
-        return bookReleaseYear;
-    }
-
-    public void setBookReleaseYear(Date bookReleaseYear) {
-        this.bookReleaseYear = bookReleaseYear;
-    }
-
-<<<<<<< HEAD
-        @Column(name = "id")
-        private long bookId;
-
-        @Column(name = "title")
-        private String bookTitle;
-
-        @ManyToOne
-        @JoinColumn(name = "authorID")
-        private AuthorEntity author;
-=======
-    public Float getBookGenre() {
-        return bookGenre;
-    }
-
-    public void setBookGenre(Float bookGenre) {
-        this.bookGenre = bookGenre;
-    }
->>>>>>> userRepository
-
-    public List<ReviewEntity> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<ReviewEntity> reviews) {
-        this.reviews = reviews;
-    }
-
-    public BookEntity() {
-    }
-
-<<<<<<< HEAD
-        @Column(name = "book")
-        private List<ReviewEntity> reviews;
-
-    public long getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(long bookId) {
-        this.bookId = bookId;
-    }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
-    }
-
-    public AuthorEntity getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(AuthorEntity author) {
-        this.author = author;
-    }
-
-    public Float getBookPrice() {
-        return bookPrice;
-    }
-
-    public void setBookPrice(Float bookPrice) {
-        this.bookPrice = bookPrice;
-    }
 
     public Date getBookReleaseYear() {
         return bookReleaseYear;
@@ -186,10 +106,8 @@ public class BookEntity {
     public BookEntity() {
     }
 
-    public BookEntity(long bookId, String bookTitle, AuthorEntity author, Float bookPrice, Date bookReleaseYear, Float bookGenre, List<ReviewEntity> reviews) {
-=======
-    public BookEntity(long bookId, String bookTitle, AuthorEntity author, String bookPrice, Date bookReleaseYear, Float bookGenre, List<ReviewEntity> reviews) {
->>>>>>> userRepository
+    public BookEntity(long bookId, String bookTitle, AuthorEntity author, String bookPrice, Date bookReleaseYear,
+                      Float bookGenre, List<ReviewEntity> reviews) {
         this.bookId = bookId;
         this.bookTitle = bookTitle;
         this.author = author;
@@ -198,8 +116,4 @@ public class BookEntity {
         this.bookGenre = bookGenre;
         this.reviews = reviews;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> userRepository

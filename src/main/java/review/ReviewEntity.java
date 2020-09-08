@@ -82,8 +82,5 @@ public class ReviewEntity {
         this.book = book;
         this.userId = userId;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> userRepository
+

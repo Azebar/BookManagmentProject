@@ -8,11 +8,7 @@ import java.text.SimpleDateFormat;
 @Table(name = "users")
 public class UserEntity {
 
-<<<<<<< HEAD
-    //id int not null auto_increment,
-=======
     //	id int not null auto_increment,
->>>>>>> userRepository
     //	first_name varchar(20) not null,
     //	last_name varchar(20) not null,
     //	email varchar(20) not null unique,
@@ -22,10 +18,7 @@ public class UserEntity {
     //	dateOfBirth date not null,
     //    address varchar(200) not null,
     //    created_at timestamp default current_timestamp,
-<<<<<<< HEAD
-=======
     //    rentID int,
->>>>>>> userRepository
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -74,28 +67,8 @@ public class UserEntity {
         return userId;
     }
 
-<<<<<<< HEAD
     public void setUserId(long userId) {
         this.userId = userId;
-=======
-    public UserEntity(String firstName, String lastName, String email, String username, String phone,
-                      String password, String dateOfBirth) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.phone = phone;
-        this.password = password;
-        this.dateOfBirth = convertDateStringToDateFormat(dateOfBirth);
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
->>>>>>> userRepository
     }
 
     public String getFirstName() {
@@ -154,49 +127,18 @@ public class UserEntity {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getUserAddress() {
-        return userAddress;
-    }
+    public UserEntity(String firstName, String lastName, String email, String username, String phone,
+                      String password, String dateOfBirth) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.username = username;
+            this.phone = phone;
+            this.password = password;
+            this.dateOfBirth = convertDateStringToDateFormat(dateOfBirth);
+        }
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
-
-    public UserEntity() {
-    }
-
-    public UserEntity(long userId, String firstName, String lastName, String email, String username, String phone,
-                      String password, Date dateOfBirth, String userAddress, Date created, Date updated) {
-        this.userId = userId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.phone = phone;
-        this.password = password;
-        this.dateOfBirth = dateOfBirth;
-        this.userAddress = userAddress;
-        this.created = created;
-        this.updated = updated;
-    }
-
-    public Date convertDateStringToDateFormat(String date) {
+        public Date convertDateStringToDateFormat(String date) {
         Date convertedDate = new Date();
         try {
             convertedDate = new SimpleDateFormat("dd-MM-yyyy").parse(date);
