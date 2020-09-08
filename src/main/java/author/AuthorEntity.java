@@ -97,4 +97,8 @@ public class AuthorEntity {
         this.country = country;
         this.books = books;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> userRepository

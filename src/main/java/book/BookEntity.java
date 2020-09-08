@@ -9,22 +9,90 @@ import java.util.List;
 
 
 @Entity
+<<<<<<< HEAD
     @Table(name = "books")
     public class BookEntity {
+=======
+@Table(name = "books")
+public class BookEntity {
 
-        //	id int not null auto_increment,
-        //    title varchar(20) not null,
-        //    authorID int,
-        //    release_year date not null,
-        //    genre varchar(40) not null,
-        //    reviewID int,
-        //    primary key(id),
-        //    foreign key (authorID) references Author(id),
-        //    foreign key (reviewID) references reviews(id)
+    //	id int not null auto_increment,
+    //    title varchar(20) not null,
+    //    authorID int,
+    //    release_year date not null,
+    //    genre varchar(40) not null,
+    //    reviewID int,
+    //    primary key(id),
+    //    foreign key (authorID) references Author(id),
+    //    foreign key (reviewID) references reviews(id)
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name = "id")
+    private long bookId;
+
+    @Column(name = "title")
+    private String bookTitle;
+
+    @ManyToOne
+    @JoinColumn(name = "authorID")
+    private AuthorEntity author;
+
+    @Column(name = "book_description")
+    private String bookPrice;
+
+    @Column(name = "release_year")
+    private Date bookReleaseYear;
+
+    @Column(name = "genre")
+    private Float bookGenre;
+
+    @Column(name = "reviews")
+    private List<ReviewEntity> reviews;
+
+    public long getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(long bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
+    }
+
+    public AuthorEntity getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(AuthorEntity author) {
+        this.author = author;
+    }
+
+    public String getBookPrice() {
+        return bookPrice;
+    }
+
+    public void setBookPrice(String bookPrice) {
+        this.bookPrice = bookPrice;
+    }
+>>>>>>> userRepository
+
+    public Date getBookReleaseYear() {
+        return bookReleaseYear;
+    }
+
+    public void setBookReleaseYear(Date bookReleaseYear) {
+        this.bookReleaseYear = bookReleaseYear;
+    }
+
+<<<<<<< HEAD
         @Column(name = "id")
         private long bookId;
 
@@ -34,16 +102,28 @@ import java.util.List;
         @ManyToOne
         @JoinColumn(name = "authorID")
         private AuthorEntity author;
+=======
+    public Float getBookGenre() {
+        return bookGenre;
+    }
 
-        @Column(name = "price")
-        private Float bookPrice;
+    public void setBookGenre(Float bookGenre) {
+        this.bookGenre = bookGenre;
+    }
+>>>>>>> userRepository
 
-        @Column(name = "release_year")
-        private Date bookReleaseYear;
+    public List<ReviewEntity> getReviews() {
+        return reviews;
+    }
 
-        @Column(name = "genre")
-        private Float bookGenre;
+    public void setReviews(List<ReviewEntity> reviews) {
+        this.reviews = reviews;
+    }
 
+    public BookEntity() {
+    }
+
+<<<<<<< HEAD
         @Column(name = "book")
         private List<ReviewEntity> reviews;
 
@@ -107,6 +187,9 @@ import java.util.List;
     }
 
     public BookEntity(long bookId, String bookTitle, AuthorEntity author, Float bookPrice, Date bookReleaseYear, Float bookGenre, List<ReviewEntity> reviews) {
+=======
+    public BookEntity(long bookId, String bookTitle, AuthorEntity author, String bookPrice, Date bookReleaseYear, Float bookGenre, List<ReviewEntity> reviews) {
+>>>>>>> userRepository
         this.bookId = bookId;
         this.bookTitle = bookTitle;
         this.author = author;
@@ -115,4 +198,8 @@ import java.util.List;
         this.bookGenre = bookGenre;
         this.reviews = reviews;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> userRepository

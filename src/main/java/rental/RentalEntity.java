@@ -30,17 +30,30 @@ public class RentalEntity {
     @Column(name = "isReturned")
     private boolean rentalIsActive;
 
+<<<<<<< HEAD
     private Date created;
     private Date updated;
 
     @PrePersist
     private void onCreate() {
         created = new Date();
+=======
+    private Date rented_at;
+    private Date return_date;
+
+    @PrePersist
+    private void onCreate() {
+        rented_at = new Date();
+>>>>>>> userRepository
     }
 
     @PreUpdate
     protected void onUpdate() {
+<<<<<<< HEAD
         updated = new Date();
+=======
+        return_date = new Date();
+>>>>>>> userRepository
     }
 
     public long getRentalId() {
@@ -75,6 +88,7 @@ public class RentalEntity {
         this.rentalIsActive = rentalIsActive;
     }
 
+<<<<<<< HEAD
     public Date getCreated() {
         return created;
     }
@@ -89,17 +103,42 @@ public class RentalEntity {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+=======
+    public Date getRented_at() {
+        return rented_at;
+    }
+
+    public void setRented_at(Date rented_at) {
+        this.rented_at = rented_at;
+    }
+
+    public Date getReturn_date() {
+        return return_date;
+    }
+
+    public void setReturn_date(Date return_date) {
+        this.return_date = return_date;
+>>>>>>> userRepository
     }
 
     public RentalEntity() {
     }
 
+<<<<<<< HEAD
     public RentalEntity(long rentalId, String bookId, double userId, boolean rentalIsActive, Date created, Date updated) {
+=======
+    public RentalEntity(long rentalId, String bookId, double userId, boolean rentalIsActive) {
+>>>>>>> userRepository
         this.rentalId = rentalId;
         this.bookId = bookId;
         this.userId = userId;
         this.rentalIsActive = rentalIsActive;
+<<<<<<< HEAD
         this.created = created;
         this.updated = updated;
     }
 }
+=======
+    }
+}
+>>>>>>> userRepository
