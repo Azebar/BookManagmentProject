@@ -1,5 +1,6 @@
 package user;
 
+import com.fasterxml.classmate.GenericType;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.DBHandler;
@@ -25,10 +26,10 @@ public class UserRepository {
         }
     }
 
-    public UserEntity getUser(Integer id){
+    public <T extends GenericType<T>> UserEntity getUser(T t1){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            UserEntity user = session.find(UserEntity.class, id);
+            UserEntity user = session.find(UserEntity.class, t1);
             return user;
         } catch (Exception e){
             e.printStackTrace();

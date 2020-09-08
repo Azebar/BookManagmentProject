@@ -8,6 +8,18 @@ import java.text.SimpleDateFormat;
 @Table(schema = "users", name = "user")
 public class UserEntity {
 
+    //	id int not null auto_increment,
+    //	first_name varchar(20) not null,
+    //	last_name varchar(20) not null,
+    //	email varchar(20) not null unique,
+    //	username varchar(20) not null unique,
+    //	phone varchar(20) null,
+    //	password varchar(100) not null,
+    //	dateOfBirth date not null,
+    //    address varchar(200) not null,
+    //    created_at timestamp default current_timestamp,
+    //    rentID int,
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -50,9 +62,8 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(String firstName, String lastName, String email, String username, String phone, String gender,
-                      String userType, String password, String dateOfBirth, String address, String countryCode,
-                      boolean isActive) {
+    public UserEntity(String firstName, String lastName, String email, String username, String phone,
+                      String password, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -60,8 +71,6 @@ public class UserEntity {
         this.phone = phone;
         this.password = password;
         this.dateOfBirth = convertDateStringToDateFormat(dateOfBirth);
-        this.created = created;
-        this.updated = updated;
     }
 
     public long getId() {
