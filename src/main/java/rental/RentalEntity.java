@@ -21,25 +21,82 @@ public class RentalEntity {
     @Column(name = "id")
     private long rentalId;
 
-    @Column(name = "bookId")
+    @Column(name = "bookID")
     private String bookId;
 
-    @Column(name = "userId")
+    @Column(name = "userID")
     private double userId;
 
-    @Column(name = "isActive")
+    @Column(name = "isReturned")
     private boolean rentalIsActive;
 
-    private Date created;
-    private Date updated;
+    private Date rented_at;
+    private Date return_date;
 
     @PrePersist
     private void onCreate() {
-        created = new Date();
+        rented_at = new Date();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updated = new Date();
+        return_date = new Date();
+    }
+
+    public long getRentalId() {
+        return rentalId;
+    }
+
+    public void setRentalId(long rentalId) {
+        this.rentalId = rentalId;
+    }
+
+    public String getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
+    }
+
+    public double getUserId() {
+        return userId;
+    }
+
+    public void setUserId(double userId) {
+        this.userId = userId;
+    }
+
+    public boolean isRentalIsActive() {
+        return rentalIsActive;
+    }
+
+    public void setRentalIsActive(boolean rentalIsActive) {
+        this.rentalIsActive = rentalIsActive;
+    }
+    public Date getRented_at() {
+        return rented_at;
+    }
+
+    public void setRented_at(Date rented_at) {
+        this.rented_at = rented_at;
+    }
+
+    public Date getReturn_date() {
+        return return_date;
+    }
+
+    public void setReturn_date(Date return_date) {
+        this.return_date = return_date;
+    }
+
+    public RentalEntity() {
+    }
+
+    public RentalEntity(long rentalId, String bookId, double userId, boolean rentalIsActive) {
+        this.rentalId = rentalId;
+        this.bookId = bookId;
+        this.userId = userId;
+        this.rentalIsActive = rentalIsActive;
     }
 }
