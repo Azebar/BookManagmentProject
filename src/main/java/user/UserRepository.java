@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.DBHandler;
 
-import java.sql.*;
 import java.util.List;
 
 public class UserRepository {
