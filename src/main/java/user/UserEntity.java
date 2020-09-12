@@ -4,8 +4,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import rental.RentalEntity;
 
 import javax.persistence.*;
-
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -153,7 +152,16 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(String firstName, String lastName, String email, String username, String phone, String password, Date dateOfBirth, String userAddress) {
+    public Date convertDateStringToDateFormat(String date) {
+        Date convertedDate = new Date();
+        try {
+            convertedDate = new SimpleDateFormat("dd-MM-yyyy").parse(date);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return convertedDate;
+    }
+    public UserEntity(String firstName, String lastName, String email, String username, String phone, String password, java.sql.Date dateOfBirth, String userAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -163,5 +171,4 @@ public class UserEntity {
         this.dateOfBirth = dateOfBirth;
         this.userAddress = userAddress;
     }
-
 }
