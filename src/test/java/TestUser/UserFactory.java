@@ -16,7 +16,7 @@ public class UserFactory {
 
     public UserEntity userInstance(){
         UserEntity user = new UserEntity();
-        user.setId(1);
+        user.setUserId(1);
         user.setFirstName("John");
         user.setLastName("Doe");
         user.setEmail("john.doe@gmail.com");
