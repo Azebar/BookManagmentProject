@@ -1,34 +1,28 @@
 package user;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import rental.RentalEntity;
-
 import javax.persistence.*;
-
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserEntity {
-
-    //id int not null auto_increment,
-    //	first_name varchar(20) not null,
-    //	last_name varchar(20) not null,
-    //	email varchar(20) not null unique,
-    //	username varchar(20) not null unique,
-    //	phone varchar(20) null,
-    //	password varchar(100) not null,
-    //	dateOfBirth date not null,
-    //    address varchar(200) not null,
-    //    created_at timestamp default current_timestamp,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "id")
-    private long userId;
+    private Integer userId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -61,97 +55,6 @@ public class UserEntity {
 
    @OneToMany(mappedBy = "user")
    private List<RentalEntity> rent;
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public java.util.Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(java.util.Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public List<RentalEntity> getRent() {
-        return rent;
-    }
-
-    public void setRent(List<RentalEntity> rent) {
-        this.rent = rent;
-    }
-
-    public UserEntity() {
-    }
 
     public UserEntity(String firstName, String lastName, String email, String username, String phone, String password, Date dateOfBirth, String userAddress) {
         this.firstName = firstName;

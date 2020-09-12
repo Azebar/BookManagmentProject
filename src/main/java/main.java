@@ -1,4 +1,5 @@
 import rental.RentalEntity;
+import review.ReviewEntity;
 import user.UserEntity;
 import user.UserRepository;
 
@@ -8,8 +9,8 @@ public class main {
 
     public static void main(String[] args) {
 
-        RentalEntity rentalEntity = new RentalEntity();
         UserRepository userRepository = new UserRepository();
+        ReviewEntity newReview = new ReviewEntity();
         UserEntity newUser = new UserEntity(
                 "Artur",
                 "Krivooov",
@@ -22,8 +23,8 @@ public class main {
         );
 
         userRepository.createUser(newUser);
-//        UserEntity oldUser = userRepository.getUser(1);
-//        System.out.println(oldUser.getFirstName());
+        UserEntity oldUser = userRepository.getUser(1);
+        System.out.println(oldUser.getFirstName());
 
     }
 }

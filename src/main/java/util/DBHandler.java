@@ -1,7 +1,9 @@
 package util;
 
+import author.AuthorEntity;
 import book.BookEntity;
 import rental.RentalEntity;
+import review.ReviewEntity;
 import user.UserEntity;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.hibernate.SessionFactory;
@@ -35,6 +37,8 @@ public class DBHandler {
             configuration.addAnnotatedClass(UserEntity.class);
             configuration.addAnnotatedClass(RentalEntity.class);
             configuration.addAnnotatedClass(BookEntity.class);
+            configuration.addAnnotatedClass(AuthorEntity.class);
+            configuration.addAnnotatedClass(ReviewEntity.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
