@@ -27,10 +27,10 @@ public class AuthorRepository {
         }
     }
 
-    public <T extends GenericType<T>> AuthorEntity getAuthor(T t1){
+    public AuthorEntity getAuthor(Integer id){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            AuthorEntity author = session.find(AuthorEntity.class, t1);
+            AuthorEntity author = session.find(AuthorEntity.class, id);
             return author;
         } catch (Exception e){
             e.printStackTrace();

@@ -26,10 +26,10 @@ public class ReviewRepository {
         }
     }
 
-    public <T extends GenericType<T>> ReviewEntity getReview(T t1){
+    public ReviewEntity getReview(Integer id){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            ReviewEntity review = session.find(ReviewEntity.class, t1);
+            ReviewEntity review = session.find(ReviewEntity.class, id);
             return review;
         } catch (Exception e){
             e.printStackTrace();

@@ -26,10 +26,10 @@ public class RentalRepository {
         }
     }
 
-    public <T extends GenericType<T>> RentalEntity getRent(T t1){
+    public RentalEntity getRent(Integer id){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            RentalEntity rent = session.find(RentalEntity.class, t1);
+            RentalEntity rent = session.find(RentalEntity.class, id);
             return rent;
         } catch (Exception e){
             e.printStackTrace();

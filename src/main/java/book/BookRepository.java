@@ -26,10 +26,10 @@ public class BookRepository {
         }
     }
 
-    public <T extends GenericType<T>> BookEntity getBook(T t1){
+    public BookEntity getBook(Integer id){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            BookEntity book = session.find(BookEntity.class, t1);
+            BookEntity book = session.find(BookEntity.class, id);
             return book;
         } catch (Exception e){
             e.printStackTrace();
