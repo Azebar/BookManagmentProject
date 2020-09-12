@@ -26,10 +26,10 @@ public class UserRepository {
         }
     }
 
-    public <T extends GenericType<T>> UserEntity getUser(T t1){
+    public UserEntity getUser(Integer id){
         try {
             Session session = DBHandler.getSessionFactory().openSession();
-            UserEntity user = session.find(UserEntity.class, t1);
+            UserEntity user = session.find(UserEntity.class, id);
             return user;
         } catch (Exception e){
             e.printStackTrace();

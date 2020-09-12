@@ -1,10 +1,15 @@
 package rental;
 
+import book.BookEntity;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import user.UserEntity;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "")
+@Table(name = "rent")
 public class RentalEntity {
 
     //	id int not null auto_increment,
@@ -21,27 +26,28 @@ public class RentalEntity {
     @Column(name = "id")
     private long rentalId;
 
-    @Column(name = "bookID")
-    private String bookId;
+//    @Column(name = "bookID")
+//    private String bookId;
+    @OneToOne
+    @JoinColumn(name = "bookID")
+    private BookEntity book;
 
-    @Column(name = "userID")
-    private double userId;
+//    @Column(name = "userID")
+//    private double userId;
+    @ManyToOne
+    @JoinColumn(name = "userID")
+    private UserEntity user;
 
     @Column(name = "isReturned")
     private boolean rentalIsActive;
 
-    private Date rented_at;
-    private Date return_date;
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "rented_at")
+    private Date rentedAt;
 
-    @PrePersist
-    private void onCreate() {
-        rented_at = new Date();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        return_date = new Date();
-    }
+    @Column(name = "return_date")
+    private Date returnDate;
 
     public long getRentalId() {
         return rentalId;
@@ -51,20 +57,20 @@ public class RentalEntity {
         this.rentalId = rentalId;
     }
 
-    public String getBookId() {
-        return bookId;
+    public BookEntity getBook() {
+        return book;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setBook(BookEntity book) {
+        this.book = book;
     }
 
-    public double getUserId() {
-        return userId;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public void setUserId(double userId) {
-        this.userId = userId;
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 
     public boolean isRentalIsActive() {
@@ -74,29 +80,25 @@ public class RentalEntity {
     public void setRentalIsActive(boolean rentalIsActive) {
         this.rentalIsActive = rentalIsActive;
     }
-    public Date getRented_at() {
-        return rented_at;
+
+    public Date getRentedAt() {
+        return rentedAt;
     }
 
-    public void setRented_at(Date rented_at) {
-        this.rented_at = rented_at;
+    public void setRentedAt(Date rentedAt) {
+        this.rentedAt = rentedAt;
     }
 
-    public Date getReturn_date() {
-        return return_date;
+    public Date getReturnDate() {
+        return returnDate;
     }
 
-    public void setReturn_date(Date return_date) {
-        this.return_date = return_date;
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
     }
 
     public RentalEntity() {
     }
 
-    public RentalEntity(long rentalId, String bookId, double userId, boolean rentalIsActive) {
-        this.rentalId = rentalId;
-        this.bookId = bookId;
-        this.userId = userId;
-        this.rentalIsActive = rentalIsActive;
-    }
+
 }
