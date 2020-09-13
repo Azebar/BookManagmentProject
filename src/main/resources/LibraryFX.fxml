@@ -79,7 +79,7 @@
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" onAction="#showReadBooks" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children>
@@ -91,7 +91,7 @@
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateAuthor" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showReadAuthor" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children></AnchorPane>
@@ -102,7 +102,7 @@
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateReview" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showReadReview" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children></AnchorPane>
@@ -113,7 +113,7 @@
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateRentals" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showReadRentals" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children></AnchorPane>
@@ -124,7 +124,7 @@
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="3.0" mnemonicParsing="false" onAction="#showCreateUser" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="44.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="44.0" mnemonicParsing="false" onAction="#showReadUser" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="85.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children></AnchorPane>
