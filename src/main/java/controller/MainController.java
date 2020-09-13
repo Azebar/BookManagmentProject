@@ -36,4 +36,26 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
+    public void showCreateReview(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/showCreateReview.fxml"));
+            maindisplay.getChildren().setAll(root);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void showCreateRentals(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/showCreateRentals.fxml"));
+            maindisplay.getChildren().setAll(root);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void exitProgram(ActionEvent actionEvent) {
+        System.exit(0);
+    }
 }

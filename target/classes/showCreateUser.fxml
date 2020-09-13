@@ -5,11 +5,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="275.0" />
-      <Button layoutX="498.0" layoutY="350.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="498.0" layoutY="350.0" mnemonicParsing="false" text="Confirm" />
       <TextField layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="275.0" />
       <TextField layoutX="14.0" layoutY="86.0" prefHeight="25.0" prefWidth="275.0" />
       <TextField layoutX="14.0" layoutY="298.0" prefHeight="25.0" prefWidth="275.0" />
@@ -25,7 +24,8 @@
       <Label layoutX="21.0" layoutY="159.0" text="phone" />
       <Label layoutX="18.0" layoutY="266.0" text="Type password" />
       <Label layoutX="19.0" layoutY="302.0" text="Retype password" />
-      <Label layoutX="18.0" layoutY="198.0" text="date of birth" />
+      <Label layoutX="18.0" layoutY="198.0" text="date of birth (yyyy-mm-dd)" />
       <Label layoutX="17.0" layoutY="233.0" text="address" />
+      <Button layoutX="439.0" layoutY="350.0" mnemonicParsing="false" text="Cancel" />
    </children>
 </Pane>
