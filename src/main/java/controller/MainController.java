@@ -20,14 +20,20 @@ public class MainController {
     }
 
     public void showCreateAuthor(ActionEvent actionEvent) {
-    }
-
-    public void showCreateReview(ActionEvent actionEvent) {
-    }
-
-    public void showCreateRentals(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/showCreateAuthor.fxml"));
+            maindisplay.getChildren().setAll(root);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void showCreateUser(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/showCreateUser.fxml"));
+            maindisplay.getChildren().setAll(root);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
