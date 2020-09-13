@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -20,7 +19,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -61,7 +60,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
         <AnchorPane>
           <children>
@@ -79,29 +78,56 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <ComboBox prefWidth="150.0" promptText="Select" />
+                                    <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                         </content>
                       </TitledPane>
                       <TitledPane animated="false" text="Authors">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                 </children></AnchorPane>
                         </content>
                       </TitledPane>
                         <TitledPane animated="false" text="Reviews">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                 </children></AnchorPane>
                           </content>
                         </TitledPane>
-                        <TitledPane animated="false" text="Rentals">
+                        <TitledPane animated="false" prefWidth="202.0" text="Rentals">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                 </children></AnchorPane>
                           </content>
                         </TitledPane>
-                      <TitledPane animated="false" prefHeight="351.0" prefWidth="202.0" text="User">
+                      <TitledPane animated="false" prefHeight="210.0" prefWidth="202.0" text="User">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="7.0" layoutY="3.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="44.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="85.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                 </children></AnchorPane>
                         </content>
                       </TitledPane>
                     </panes>
@@ -110,18 +136,13 @@
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="519.0" prefWidth="661.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Display" textAlignment="CENTER" textFill="$x2" wrapText="false" />
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane>
-          <children>
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Options" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-          </children>
-        </AnchorPane>
       </items>
     </SplitPane>
     <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
