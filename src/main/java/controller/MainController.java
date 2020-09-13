@@ -18,4 +18,16 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
+    public void showCreateAuthor(ActionEvent actionEvent) {
+    }
+
+    public void showCreateReview(ActionEvent actionEvent) {
+    }
+
+    public void showCreateRentals(ActionEvent actionEvent) {
+    }
+
+    public void showCreateUser(ActionEvent actionEvent) {
+    }
 }

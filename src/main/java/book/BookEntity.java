@@ -36,7 +36,7 @@ public class BookEntity {
     private List<AuthorEntity> author;
 
     @Column(name = "book_description")
-    private String bookPrice;
+    private String bookSummary;
 
     @Column(name = "release_year")
     private Date bookReleaseYear;
@@ -47,10 +47,10 @@ public class BookEntity {
     @OneToMany(mappedBy = "book")
     private List<ReviewEntity> reviews;
 
-    public BookEntity(String bookTitle, List<AuthorEntity> author, String bookPrice, Date bookReleaseYear, String bookGenre) {
+    public BookEntity(String bookTitle, List<AuthorEntity> author, String bookSummary, Date bookReleaseYear, String bookGenre) {
         this.bookTitle = bookTitle;
         this.author = author;
-        this.bookPrice = bookPrice;
+        this.bookSummary = bookSummary;
         this.bookReleaseYear = bookReleaseYear;
         this.bookGenre = bookGenre;
     }
