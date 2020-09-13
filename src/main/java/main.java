@@ -1,10 +1,5 @@
-import rental.RentalEntity;
-import review.ReviewEntity;
 import user.UserEntity;
 import user.UserRepository;
-
-
-import java.sql.Date;
 
 public class main {
 
@@ -25,7 +20,6 @@ public class main {
 //
 //        userRepository.createUser(newUser);
         UserEntity oldUser = userRepository.getUser(1);
-        System.out.println(oldUser.getfirstName());
-
+        System.out.println(oldUser.getFirstName());
     }
 }

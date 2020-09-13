@@ -78,7 +78,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
                                     <Button layoutX="7.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
@@ -136,7 +136,7 @@
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="519.0" prefWidth="661.0">
+            <AnchorPane id="Content" fx:id="maindisplay" minHeight="-1.0" minWidth="-1.0" prefHeight="519.0" prefWidth="661.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Display" textAlignment="CENTER" textFill="$x2" wrapText="false" />
               </children>
