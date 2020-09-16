@@ -35,8 +35,6 @@ public class BookEntity {
             )
     private List<AuthorEntity> author;
 
-    @Column(name = "book_description")
-    private String bookSummary;
 
     @Column(name = "release_year")
     private Date bookReleaseYear;
@@ -46,6 +44,10 @@ public class BookEntity {
 
     @OneToMany(mappedBy = "book")
     private List<ReviewEntity> reviews;
+
+    @Column(name = "book_description")
+    private String bookSummary;
+
 
     public BookEntity(String bookTitle, List<AuthorEntity> author, String bookSummary, Date bookReleaseYear, String bookGenre) {
         this.bookTitle = bookTitle;

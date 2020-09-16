@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="86.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="393.0" layoutY="18.0" prefHeight="202.0" prefWidth="193.0" />
+      <TextField layoutX="14.0" layoutY="262.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="229.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="194.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="159.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="123.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="300.0" layoutY="87.0" text="first name" />
+      <Label layoutX="301.0" layoutY="124.0" text="last name" />
+      <Label layoutX="301.0" layoutY="161.0" text="email address" />
+      <Label layoutX="301.0" layoutY="52.0" text="username" />
+      <Label layoutX="300.0" layoutY="197.0" text="phone" />
+      <Label layoutX="300.0" layoutY="232.0" text="date of birth" />
+      <Label layoutX="300.0" layoutY="267.0" text="address" />
+      <Label layoutX="300.0" layoutY="300.0" text="Created On" />
+      <Label layoutX="503.0" layoutY="232.0" text="Active Rentals" />
+      <Button layoutX="452.0" layoutY="303.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Delete" textAlignment="CENTER" />
+      <Button layoutX="452.0" layoutY="347.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Update" textAlignment="CENTER" />
+      <TextField layoutX="14.0" layoutY="295.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="301.0" layoutY="18.0" text="user ID" />
+   </children>
+</Pane>

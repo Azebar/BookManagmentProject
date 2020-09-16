@@ -12,10 +12,10 @@
       <TextField layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="275.0" />
       <TextField layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="275.0" />
       <TextField layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" />
-      <Label layoutX="19.0" layoutY="24.0" text="first name" />
-      <Label layoutX="20.0" layoutY="61.0" text="last name" />
-      <Label layoutX="21.0" layoutY="130.0" text="country" />
-      <Label layoutX="21.0" layoutY="98.0" text="date of birth (yyyy-mm-dd)" />
+      <Label layoutX="300.0" layoutY="24.0" text="first name" />
+      <Label layoutX="301.0" layoutY="61.0" text="last name" />
+      <Label layoutX="300.0" layoutY="134.0" text="country" />
+      <Label layoutX="301.0" layoutY="98.0" text="date of birth (yyyy-mm-dd)" />
       <Button layoutX="439.0" layoutY="350.0" mnemonicParsing="false" text="Cancel" />
    </children>
 </Pane>
