@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="158.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="86.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField layoutX="14.0" layoutY="195.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="299.0" layoutY="162.0" text="Present Date" />
+      <Label layoutX="300.0" layoutY="90.0" text="Book title" />
+      <Label layoutX="300.0" layoutY="125.0" text="Username" />
+      <Label layoutX="297.0" layoutY="199.0" text="Return Date" />
+      <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="299.0" layoutY="18.0" text="Book ref#" />
+      <TextField layoutX="14.0" layoutY="51.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="299.0" layoutY="55.0" text="UserID" />
+      <Button layoutX="442.0" layoutY="310.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Return Book" textAlignment="CENTER" />
+      <Button layoutX="442.0" layoutY="354.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Update" textAlignment="CENTER" />
+   </children>
+</Pane>

@@ -74,59 +74,49 @@
             </Label>
                   <Accordion layoutX="10.0" layoutY="56.0" prefWidth="202.0">
                     <panes>
-                      <TitledPane animated="false" text="Books">
+                      <TitledPane animated="false" prefHeight="115.0" prefWidth="202.0" text="Books">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="90.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="49.0" mnemonicParsing="false" onAction="#showSearchBook" prefHeight="32.0" prefWidth="186.0" text="Search" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                         </content>
                       </TitledPane>
-                      <TitledPane animated="false" text="Authors">
+                      <TitledPane animated="false" prefWidth="202.0" text="Authors">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="91.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateAuthor" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showSearchAuthor" prefHeight="32.0" prefWidth="186.0" text="Search" textAlignment="CENTER" />
                                  </children></AnchorPane>
                         </content>
                       </TitledPane>
-                        <TitledPane animated="false" text="Reviews">
+                        <TitledPane animated="false" prefWidth="202.0" text="Reviews">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateReview" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showSearchReview" prefHeight="32.0" prefWidth="186.0" text="Search" textAlignment="CENTER" />
                                  </children></AnchorPane>
                           </content>
                         </TitledPane>
-                        <TitledPane animated="false" prefWidth="202.0" text="Rentals">
+                        <TitledPane animated="false" prefHeight="120.0" prefWidth="202.0" text="Rentals">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateRentals" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#showCreateRental" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#showSearchRental" prefHeight="32.0" prefWidth="186.0" text="Search" textAlignment="CENTER" />
                                  </children></AnchorPane>
                           </content>
                         </TitledPane>
-                      <TitledPane animated="false" prefHeight="210.0" prefWidth="202.0" text="User">
+                      <TitledPane animated="false" prefHeight="133.0" prefWidth="202.0" text="User">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0">
                                  <children>
                                     <Button layoutX="7.0" layoutY="3.0" mnemonicParsing="false" onAction="#showCreateUser" prefHeight="32.0" prefWidth="186.0" text="Create" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="44.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Read" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="85.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Update" textAlignment="CENTER" />
-                                    <Button layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" text="Delete" textAlignment="CENTER" />
+                                    <Button layoutX="7.0" layoutY="44.0" mnemonicParsing="false" onAction="#showSearchUser" prefHeight="32.0" prefWidth="186.0" text="Search" textAlignment="CENTER" />
                                  </children></AnchorPane>
                         </content>
                       </TitledPane>
