@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
-
+<?import java.lang.String?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ChoiceBox layoutX="27.0" layoutY="146.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="27.0" layoutY="146.0" prefWidth="150.0" value="Select an option...">
+         <items>
+         <FXCollections fx:factory = "observableArrayList">
+            <String fx:value="Select an option..." />
+            <String fx:value="Title" />
+            <String fx:value="Author" />
+            <String fx:value="Genre" />
+            <String fx:value="Book reference" />
+            <String fx:value="Release year" />
+         </FXCollections>
+         </items>
+      </ChoiceBox>
       <TextField layoutX="27.0" layoutY="88.0" prefHeight="40.0" prefWidth="510.0" />
       <Label layoutX="36.0" layoutY="25.0" prefHeight="17.0" prefWidth="126.0" text="Search Book" />
    </children>

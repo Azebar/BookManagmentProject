@@ -24,6 +24,7 @@ public class MainController {
     public void showCreateAuthor(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/CreateEntities/showCreateAuthor.fxml"));
+
             maindisplay.getChildren().setAll(root);
         }catch (Exception e){
             e.printStackTrace();
