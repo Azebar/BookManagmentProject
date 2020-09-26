@@ -1,5 +1,6 @@
 package controller;
 
+import book.BookEntity;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -102,5 +103,17 @@ public class MainController {
 
     public void exitProgram(ActionEvent actionEvent) {
         System.exit(0);
+    }
+
+    public void createBook(ActionEvent actionEvent){
+        BookEntity book = new BookEntity();
+        try{
+            book.setBookTitle();
+            book.setAuthor();
+            book.setBookReleaseYear();
+            book.setBookGenre();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
