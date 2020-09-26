@@ -1,10 +1,7 @@
 package author;
 
-import com.fasterxml.classmate.GenericType;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.Entity;
-import user.UserEntity;
 import util.DBHandler;
 
 import java.util.List;

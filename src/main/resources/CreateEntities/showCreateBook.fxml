@@ -5,15 +5,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.createBookController">
    <children>
       <TextField layoutX="14.0" layoutY="200.0" prefHeight="178.0" prefWidth="570.0" />
-      <Button layoutX="517.0" layoutY="164.0" mnemonicParsing="false" text="Confirm" />
-      <TextField layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="275.0" promptText="Author" />
-      <TextField layoutX="14.0" layoutY="86.0" prefHeight="25.0" prefWidth="275.0" promptText="Release Year" />
-      <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="275.0" promptText="Title" />
-      <TextField layoutX="14.0" layoutY="123.0" prefHeight="25.0" prefWidth="275.0" promptText="Genre" />
+      <Button fx:id="confirm" layoutX="517.0" layoutY="164.0" mnemonicParsing="false" text="Confirm" />
+      <TextField fx:id="author" layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="275.0" promptText="Author" />
+      <TextField fx:id="realeaseYear" layoutX="14.0" layoutY="86.0" prefHeight="25.0" prefWidth="275.0" promptText="Release Year" />
+      <TextField fx:id="title" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="275.0" promptText="Title" />
+      <TextField fx:id="genre" layoutX="14.0" layoutY="123.0" prefHeight="25.0" prefWidth="275.0" promptText="Genre" />
       <Label layoutX="14.0" layoutY="181.0" text="Summary" />
-      <Button layoutX="445.0" layoutY="164.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="cancel" layoutX="445.0" layoutY="164.0" mnemonicParsing="false" onAction="#createBook" text="Cancel" />
    </children>
 </Pane>

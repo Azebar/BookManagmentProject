@@ -33,16 +33,15 @@ public class AuthorEntity {
     private Date dateOfBirth;
 
     @Column(name = "country")
-    private Date country;
+    private String country;
 
     @OneToMany(mappedBy = "author")
     private List<BookEntity> books;
 
-    public AuthorEntity(String firstName, String lastName, Date dateOfBirth, Date country, List<BookEntity> books) {
+    public AuthorEntity(String firstName, String lastName, Date dateOfBirth, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.country = country;
-        this.books = books;
     }
 }

@@ -4,13 +4,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.createAuthorController">
    <children>
-      <Button layoutX="498.0" layoutY="350.0" mnemonicParsing="false" text="Confirm" />
-      <TextField layoutX="14.0" layoutY="20.0" prefHeight="25.0" prefWidth="275.0" promptText="First name" />
-      <TextField layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="275.0" promptText="Last name" />
-      <TextField layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="275.0" promptText="Country" />
-      <TextField layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" promptText="Date of birth (yyyy-mm-dd)" />
-      <Button layoutX="439.0" layoutY="350.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="confirm" layoutX="498.0" layoutY="350.0" mnemonicParsing="false" onAction="#createAuthor" text="Confirm" />
+      <TextField fx:id="firstName" layoutX="14.0" layoutY="20.0" prefHeight="25.0" prefWidth="275.0" promptText="First name" />
+      <TextField fx:id="lastName" layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="275.0" promptText="Last name" />
+      <TextField fx:id="country" layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="275.0" promptText="Country" />
+      <TextField fx:id="dateOfBirth" layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" promptText="Date of birth (yyyy-mm-dd)" />
+      <Button fx:id="cancel" layoutX="439.0" layoutY="350.0" mnemonicParsing="false" text="Cancel" />
    </children>
 </Pane>
