@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -38,12 +39,15 @@ public class createAuthorController {
             Date dateOfBirthHelper;
 
             if (checkIfFieldIsEmpty() == false) {
+
                 firstNameHelper = firstName.getText();
                 lastNameHelper = lastName.getText();
                 countryHelper = country.getText();
                 dateOfBirthHelper = parseDateOfBirthFromTextField();
-                AuthorEntity author = new AuthorEntity(firstNameHelper,lastNameHelper,dateOfBirthHelper, countryHelper);
-                createAuthorInRepository(author);
+                if (dateOfBirthHelper!=null) {
+                    AuthorEntity author = new AuthorEntity(firstNameHelper, lastNameHelper, dateOfBirthHelper, countryHelper);
+                    createAuthorInRepository(author);
+                }
             }
     }
 
@@ -72,17 +76,34 @@ public class createAuthorController {
         return isEmpty;
     }
 
-    public Date parseDateOfBirthFromTextField(){
-            Date date = new Date();
+    public Date parseDateOfBirthFromTextField() {
+        SimpleDateFormat date = new SimpleDateFormat();
+        Date d = new Date();
+        date.applyPattern("yyyy-MM-dd");
+        date.setLenient(false);
 
             try{
-                date = new SimpleDateFormat("yyyy-mm-dd").parse(dateOfBirth.getText());
-            }catch (Exception e){
+               d = date.parse(dateOfBirth.getText());
+            }catch (ParseException e){
                 dateOfBirth.setText("");
                 dateOfBirth.setPromptText("Incorrect format (yyyy-mm-dd)");
+                d = null;
+                return d;
             }
-            return date;
+            return d;
     }
+
+//    public Date helperBuilder(){
+//        SimpleDateFormat date = new SimpleDateFormat();
+//        date.applyPattern("yyyy-MM-dd");
+//        Date helper = new Date();
+//        try{
+//            helper = date.parse("0001-01-01");
+//        }catch (ParseException p){
+//            p.printStackTrace();
+//        }
+//        return helper;
+//    }
 
     public void createAuthorInRepository(AuthorEntity author){
             try{
