@@ -87,23 +87,10 @@ public class createAuthorController {
             }catch (ParseException e){
                 dateOfBirth.setText("");
                 dateOfBirth.setPromptText("Incorrect format (yyyy-mm-dd)");
-                d = null;
-                return d;
+                return null;
             }
             return d;
     }
-
-//    public Date helperBuilder(){
-//        SimpleDateFormat date = new SimpleDateFormat();
-//        date.applyPattern("yyyy-MM-dd");
-//        Date helper = new Date();
-//        try{
-//            helper = date.parse("0001-01-01");
-//        }catch (ParseException p){
-//            p.printStackTrace();
-//        }
-//        return helper;
-//    }
 
     public void createAuthorInRepository(AuthorEntity author){
             try{
