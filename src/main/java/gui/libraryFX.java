@@ -12,8 +12,6 @@ public class libraryFX extends Application {
         launch(args);
     }
 
-
-
     @Override
     public void start(Stage primaryStage){
         try {

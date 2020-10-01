@@ -6,12 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.searchAuthorController">
    <children>
-      <ChoiceBox layoutX="27.0" layoutY="88.0" prefWidth="150.0" value="Select an option...">
+      <ChoiceBox fx:id="optionChoiceButton" onAction="#launchAuthorSearch" layoutX="27.0" layoutY="88.0" prefWidth="150.0" value="Select an option...">
          <items>
             <FXCollections fx:factory="observableArrayList">
-               <String fx:value="Select an option..." />
+               <String fx:value="default" />
                <String fx:value="Author last name" />
                <String fx:value="Book" />
                <String fx:value="Country" />
@@ -19,6 +19,6 @@
             </FXCollections>
          </items>
       </ChoiceBox>
-      <TextField layoutX="27.0" layoutY="38.0" prefHeight="40.0" prefWidth="510.0" promptText="Search for Author" />
+      <TextField fx:id="searchTextInput" layoutX="27.0" layoutY="35.0" onAction="#searchAuthor" prefHeight="40.0" prefWidth="510.0" promptText="Search for Author" />
    </children>
 </Pane>
