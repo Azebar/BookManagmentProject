@@ -10,31 +10,27 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import org.hibernate.SQLQuery;
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import util.DBHandler;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
 
 
 public class searchAuthorController {
+
+    private ObservableList<AuthorEntity> authorsObservableList = FXCollections.observableArrayList();
 
     @FXML
     private TextField searchTextInput;
 
     @FXML
-    private ChoiceBox optionChoiceButton;
-
-    private ObservableList<AuthorEntity> authorsObservableList;
+    private ChoiceBox<String> optionChoiceButton;
 
     @FXML
     private TableView<AuthorEntity> authorsTable;
 
     @FXML
-    private TableColumn<AuthorEntity, String> referenceColumn;
+    private TableColumn<AuthorEntity, Integer> referenceColumn;
 
     @FXML
     private TableColumn<AuthorEntity, String> firstNameColumn;
@@ -49,10 +45,25 @@ public class searchAuthorController {
     public void searchAuthor (){
 
     }
+    public void initialize() {
+        referenceColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("first_name"));
+        lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("last_name"));
+        countryColumn.setCellValueFactory(new PropertyValueFactory<>("country"));
+    }
+
+    public void loadTableView(ObservableList<AuthorEntity> authorsObservableList){
+        authorsTable.setItems(authorsObservableList);
+    }
+
+    public ObservableList<AuthorEntity> getAuthorEntityObservableList(){
+        return authorsObservableList;
+    }
+
 
     public void inputAuthorSearch(ActionEvent event){
         AuthorRepository authorRepository = new AuthorRepository();
-        String choice = (String) optionChoiceButton.getValue();
+        String choice = optionChoiceButton.getValue();
 
         switch (choice) {
             case ("default"):
@@ -69,6 +80,7 @@ public class searchAuthorController {
                 break;
             case ("Reference number"):
                searchAuthorByID(authorRepository);
+               loadTableView(getAuthorEntityObservableList());
                 break;
             default:
                 searchTextInput.setPromptText("No matching author found");
@@ -88,24 +100,21 @@ public class searchAuthorController {
 
     }
 
-    public ResultSet searchAuthorByID(AuthorRepository authorRepository){
-        Connection c;
-        data = FXCollections.observableArrayList();
+    public void searchAuthorByID(AuthorRepository authorRepository){
 
         try{
             String idString = searchTextInput.getText();
             int id =Integer.parseInt(idString);
             Session session = DBHandler.getSessionFactory().openSession();
-            PreparedStatement ps = session.con
-            String sql = "SELECT * FROM authors where id = authorID;";
-            SQLQuery query =  session.createSQLQuery(sql);
-            query.setInteger("authorID", id);
-            List<AuthorEntity> authorsResults = query.list();
+            String sql = "SELECT * FROM authors WHERE id = :authorID";
+            Query query =  session.createSQLQuery(sql);
+            query.setParameter("authorID", id);
+            authorsObservableList.addAll(query.list());
         }catch (Exception e){
             e.printStackTrace();
         }
-        return null;
     }
+
 
     public void launchDisplayAuthor (AuthorEntity author){
 

@@ -1,6 +1,7 @@
 package controller;
 
 import author.AuthorEntity;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -13,18 +14,18 @@ import java.util.ResourceBundle;
 
 public class searchAuthorResultsController implements Initializable {
 
-    @FXML private TableView<AuthorEntity> authorsTable;
-    @FXML private TableColumn<AuthorEntity, String> referenceColumn;
-    @FXML private TableColumn<AuthorEntity, String> firstNameColumn;
-    @FXML private TableColumn<AuthorEntity, String> lastNameColumn;
-    @FXML private TableColumn<AuthorEntity, String> countryColumn;
+    @FXML private TableView<List<AuthorEntity>> authorsTable;
+    @FXML private TableColumn<AuthorEntity, StringProperty> referenceColumn;
+    @FXML private TableColumn<AuthorEntity, StringProperty> firstNameColumn;
+    @FXML private TableColumn<AuthorEntity, StringProperty> lastNameColumn;
+    @FXML private TableColumn<AuthorEntity, StringProperty> countryColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        referenceColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, String>("id"));
-        firstNameColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, String>("first_name"));
-        firstNameColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, String>("last_name"));
-        countryColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, String>("country"));
+        referenceColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, StringProperty>("id"));
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, StringProperty>("first_name"));
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, StringProperty>("last_name"));
+        countryColumn.setCellValueFactory(new PropertyValueFactory<AuthorEntity, StringProperty>("country"));
 
         authorsTable.getItems().setAll(parseUserList());
     }
