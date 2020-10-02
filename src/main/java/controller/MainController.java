@@ -10,8 +10,14 @@ import java.io.IOException;
 
 public class MainController {
 
+    public MainController() {
+    }
+
     @FXML
     AnchorPane maindisplay;
+
+
+
     public void showCreateBook(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/CreateEntities/showCreateBook.fxml"));
@@ -93,6 +99,15 @@ public class MainController {
     public void showSearchRental(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/SearchEntities/showSearchRental.fxml"));
+            maindisplay.getChildren().setAll(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showDisplayAuthor() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/DisplayEntities/showDisplayAuthor.fxml"));
             maindisplay.getChildren().setAll(root);
         } catch (IOException e) {
             e.printStackTrace();

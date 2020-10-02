@@ -3,12 +3,14 @@
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.searchAuthorController">
    <children>
-      <ChoiceBox fx:id="optionChoiceButton" onAction="#launchAuthorSearch" layoutX="27.0" layoutY="88.0" prefWidth="150.0" value="Select an option...">
+      <ChoiceBox fx:id="optionChoiceButton" layoutX="14.0" layoutY="60.0" prefWidth="150.0" value="Select an option...">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="default" />
@@ -19,6 +21,14 @@
             </FXCollections>
          </items>
       </ChoiceBox>
-      <TextField fx:id="searchTextInput" layoutX="27.0" layoutY="35.0" onAction="#searchAuthor" prefHeight="40.0" prefWidth="510.0" promptText="Search for Author" />
+      <TextField fx:id="searchTextInput" layoutX="14.0" layoutY="14.0" onAction="#inputAuthorSearch" prefHeight="40.0" prefWidth="569.0" promptText="Search for Author" />
+      <TableView fx:id="authorsTable" layoutX="-5.0" layoutY="96.0" prefHeight="303.0" prefWidth="606.0">
+         <columns>
+            <TableColumn fx:id="referenceColumn" prefWidth="47.0" text="Ref#" />
+            <TableColumn fx:id="firstNameColumn" prefWidth="180.0" text="First name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="180.0" text="Last name" />
+            <TableColumn fx:id="countryColumn" minWidth="8.0" prefWidth="147.0" text="Country" />
+         </columns>
+      </TableView>
    </children>
 </Pane>
