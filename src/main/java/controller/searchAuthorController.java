@@ -46,9 +46,9 @@ public class searchAuthorController {
 
     }
     public void initialize() {
-        referenceColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("first_name"));
-        lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("last_name"));
+        referenceColumn.setCellValueFactory(new PropertyValueFactory<>("authorId"));
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         countryColumn.setCellValueFactory(new PropertyValueFactory<>("country"));
     }
 
@@ -88,8 +88,8 @@ public class searchAuthorController {
         }
     }
 
-    public void searchAuthorsByBook(){
 
+    public void searchAuthorsByBook(){
     }
 
     public void searchAuthorByLastName(){
@@ -106,9 +106,10 @@ public class searchAuthorController {
             String idString = searchTextInput.getText();
             int id =Integer.parseInt(idString);
             Session session = DBHandler.getSessionFactory().openSession();
-            String sql = "SELECT * FROM authors WHERE id = :authorID";
-            Query query =  session.createSQLQuery(sql);
-            query.setParameter("authorID", id);
+            //String sql = "SELECT * FROM authors WHERE id = :authorID";
+            String queryString = "from AuthorEntity a where a.authorId = :authorId";
+            Query<AuthorEntity> query = session.createQuery(queryString);
+            query.setParameter("authorId", id);
             authorsObservableList.addAll(query.list());
         }catch (Exception e){
             e.printStackTrace();
