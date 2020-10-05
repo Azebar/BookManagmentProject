@@ -4,9 +4,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.DBHandler;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 public class AuthorRepository {
+
     public void createAuthor(AuthorEntity author){
         Transaction transaction = null;
 
@@ -20,6 +22,52 @@ public class AuthorRepository {
             if (transaction != null) {
                 transaction.rollback();
             }
+            e.printStackTrace();
+        }
+    }
+
+    public ResultSet searchAuthorsByID(){
+        Transaction transaction = null;
+
+        try{
+            Session session = DBHandler.getSessionFactory().openSession();
+           // List <AuthorEntity> authors = session.createQuery();
+            String sqlQuery = "SELECT * FROM authors";
+
+            //ResultSet
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void searchAuthorsByLastName(){
+        Transaction transaction = null;
+
+        try{
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void searchAuthorsByCountry(){
+        Transaction transaction = null;
+
+        try{
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void searchAuthorsByBooks(){
+        Transaction transaction = null;
+
+        try{
+
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }

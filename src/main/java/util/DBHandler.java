@@ -2,15 +2,15 @@ package util;
 
 import author.AuthorEntity;
 import book.BookEntity;
-import rental.RentalEntity;
-import review.ReviewEntity;
-import user.UserEntity;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
+import rental.RentalEntity;
+import review.ReviewEntity;
+import user.UserEntity;
 
 import java.util.Properties;
 

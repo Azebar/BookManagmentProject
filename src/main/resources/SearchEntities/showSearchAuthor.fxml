@@ -3,12 +3,17 @@
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.searchAuthorController">
-   <children>
-      <ChoiceBox fx:id="optionChoiceButton" onAction="#launchAuthorSearch" layoutX="27.0" layoutY="88.0" prefWidth="150.0" value="Select an option...">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.searchAuthorController">
+      <ChoiceBox fx:id="optionChoiceButton" layoutX="14.0" layoutY="87.0" prefWidth="150.0" value="Select an option...">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="default" />
@@ -19,6 +24,39 @@
             </FXCollections>
          </items>
       </ChoiceBox>
-      <TextField fx:id="searchTextInput" layoutX="27.0" layoutY="35.0" onAction="#searchAuthor" prefHeight="40.0" prefWidth="510.0" promptText="Search for Author" />
-   </children>
+      <TextField fx:id="searchTextInput" layoutX="14.0" layoutY="28.0" onAction="#inputAuthorSearch" prefHeight="40.0" prefWidth="569.0" promptText="Search for Author" />
+      <GridPane alignment="CENTER" layoutX="-5.0" layoutY="141.0" prefHeight="378.0" prefWidth="668.0">
+      <TableView fx:id="authorsTable" prefHeight="399.0" prefWidth="668.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn fx:id="referenceColumn" prefWidth="47.0" text="Ref#">
+                <cellValueFactory>
+                    <PropertyValueFactory property="authorId" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="firstNameColumn" prefWidth="170.0" text="First name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="lastNameColumn" prefWidth="170.0" text="Last name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="countryColumn" minWidth="8.0" prefWidth="120.0" text="Country">
+                <cellValueFactory>
+                    <PropertyValueFactory property="country" />
+                </cellValueFactory>
+            </TableColumn>
+             <TableColumn fx:id="actionColumn" minWidth="8.0" prefWidth="120.0" text="Select"/>
+         </columns>
+      </TableView>
+      <columnConstraints>
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+      </GridPane>
 </Pane>

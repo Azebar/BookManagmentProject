@@ -5,21 +5,21 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayAuthorController">
    <children>
-      <TextField layoutX="14.0" layoutY="20.0" prefHeight="25.0" prefWidth="275.0" />
-      <TextField layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="275.0" />
-      <TextField layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="275.0" />
-      <TextField layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField fx:id="AuthorID" layoutX="14.0" layoutY="20.0" prefHeight="25.0" prefWidth="275.0" text=" " />
+      <TextField fx:id="AuthorFirstName" layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField fx:id="AuthorDateOfBirth" layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="275.0" />
+      <TextField fx:id="AuthorLastName" layoutX="14.0" layoutY="94.0" prefHeight="25.0" prefWidth="275.0" />
       <Label layoutX="297.0" layoutY="67.0" text="First name" />
       <Label layoutX="298.0" layoutY="104.0" text="Last name" />
       <Label layoutX="297.0" layoutY="177.0" text="Country" />
       <Label layoutX="298.0" layoutY="141.0" text="Date of birth" />
-      <TextField layoutX="14.0" layoutY="207.0" prefHeight="162.0" prefWidth="275.0" />
+      <TextField fx:id="AuthorBooks" layoutX="14.0" layoutY="207.0" prefHeight="162.0" prefWidth="275.0" />
       <Label layoutX="300.0" layoutY="218.0" text="Books" />
-      <Button layoutX="442.0" layoutY="337.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Update" textAlignment="CENTER" />
-      <Button layoutX="442.0" layoutY="293.0" mnemonicParsing="false" onAction="#showCreateBook" prefHeight="32.0" prefWidth="144.0" text="Delete" textAlignment="CENTER" />
-      <TextField layoutX="14.0" layoutY="172.0" prefHeight="25.0" prefWidth="275.0" />
+      <Button layoutX="442.0" layoutY="337.0" mnemonicParsing="false" onAction="#updateAuthor" prefHeight="32.0" prefWidth="144.0" text="Update" textAlignment="CENTER" />
+      <Button layoutX="442.0" layoutY="293.0" mnemonicParsing="false" onAction="#deleteAuthor" prefHeight="32.0" prefWidth="144.0" text="Delete" textAlignment="CENTER" />
+      <TextField fx:id="AuthorCountry" layoutX="14.0" layoutY="172.0" prefHeight="25.0" prefWidth="275.0" />
       <Label layoutX="297.0" layoutY="24.0" text="Author ref#" />
    </children>
 </Pane>
