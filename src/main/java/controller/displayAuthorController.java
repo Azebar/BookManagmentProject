@@ -11,22 +11,22 @@ public class displayAuthorController {
     AuthorEntity author;
 
     @FXML
-    private TextField AuthorID;
+    private TextField authorID;
 
     @FXML
-    private TextField AuthorFirstName;
+    private TextField authorFirstName;
 
     @FXML
-    private TextField AuthorLastName;
+    private TextField authorLastName;
 
     @FXML
-    private TextField AuthorDateOfBirth;
+    private TextField authorDateOfBirth;
 
     @FXML
-    private TextField AuthorCountry;
+    private TextField authorCountry;
 
     @FXML
-    private TextField AuthorBooks;
+    private TextField authorBooks;
 
 
     public displayAuthorController(AuthorEntity author) {
@@ -34,16 +34,24 @@ public class displayAuthorController {
         displayAuthor();
     }
 
+    public displayAuthorController() {
+    }
+
+    public void initialize() {
+        authorID.setText(String.valueOf(author.getAuthorId()));
+        authorFirstName.setText(author.getFirstName());
+        authorLastName.setText(author.getLastName());
+        authorDateOfBirth.setText(String.valueOf(author.getDateOfBirth()));
+        authorCountry.setText(author.getCountry());
+        authorBooks.setText(author.getCountry());
+
+    }
+
 
 
     public void displayAuthor(){
 
-//        AuthorID.setText(String.valueOf(author.getAuthorId()));
-//        AuthorFirstName.setText(author.getFirstName());
-//        AuthorLastName.setText(author.getLastName());
-//        AuthorDateOfBirth.setText(String.valueOf(author.getDateOfBirth()));
-//        AuthorCountry.setText(author.getCountry());
-//        AuthorBooks.setText(author.getCountry());
+
     }
 
 
@@ -55,4 +63,6 @@ public class displayAuthorController {
     public void updateAuthor(){
 
     }
+
+
 }

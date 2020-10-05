@@ -42,15 +42,33 @@ public class searchAuthorController {
     private TableColumn<AuthorEntity, String> countryColumn;
 
     @FXML
-    public void searchAuthor (){
+    public void searchAuthor() {
 
     }
+
     public void initialize() {
         referenceColumn.setCellValueFactory(new PropertyValueFactory<>("authorId"));
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         countryColumn.setCellValueFactory(new PropertyValueFactory<>("country"));
+
+        // Listen for a mouse click and access the selectedItem property
+        authorsTable.setOnMouseClicked(event -> {
+            // Make sure the user clicked on a populated item
+            if (authorsTable.getSelectionModel().getSelectedItem() != null) {
+                try {
+                    //do omething here to launch the displayAuthorController in Anchorpane maindisplay
+
+
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+                AuthorRepository authorRepository = new AuthorRepository();
+                authorRepository.getAuthor(3);
+        });
     }
+
 
     public void loadTableView(ObservableList<AuthorEntity> authorsObservableList){
         authorsTable.setItems(authorsObservableList);
@@ -59,6 +77,8 @@ public class searchAuthorController {
     public ObservableList<AuthorEntity> getAuthorEntityObservableList(){
         return authorsObservableList;
     }
+
+
 
 
     public void inputAuthorSearch(ActionEvent event){

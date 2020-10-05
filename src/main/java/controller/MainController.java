@@ -1,5 +1,6 @@
 package controller;
 
+import author.AuthorEntity;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,8 +16,6 @@ public class MainController {
 
     @FXML
     AnchorPane maindisplay;
-
-
 
     public void showCreateBook(ActionEvent actionEvent) {
         try {
@@ -105,7 +104,7 @@ public class MainController {
         }
     }
 
-    public void showDisplayAuthor() {
+    public void showDisplayAuthor(ActionEvent actionEvent, AuthorEntity author) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/DisplayEntities/showDisplayAuthor.fxml"));
             maindisplay.getChildren().setAll(root);
